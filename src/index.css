@@ -1,0 +1,206 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  font-family: "Varela Round", sans-serif;
+}
+
+ol,
+ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.square {
+  background: #eee;
+  float: left;
+  line-height: 182px;
+  height: 182px;
+  width: 182px;
+  margin: 0.4em;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2em;
+  width: 100vw;
+  height: 100vh;
+}
+
+.board-status {
+  margin-bottom: 2em;
+  margin: 0.4em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.christmas-tree {
+  background-image: url("cesc-grane-christmas-tree.jpg");
+  background-size: cover;
+}
+
+.oak-tree {
+  background-image: url("cesc-grane-oak-tree.jpg");
+  background-size: cover;
+}
+
+.player1 {
+  width: 96px;
+  height: 96px;
+  background-image: url("cesc-grane-christmas-tree.jpg");
+  background-size: cover;
+
+  border-radius: 10px;
+  border: 6px solid white;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.player2 {
+  width: 96px;
+  height: 96px;
+  background-image: url("cesc-grane-oak-tree.jpg");
+  background-size: cover;
+
+  border-radius: 10px;
+  border: 6px solid white;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.active {
+  opacity: 1;
+}
+
+.gameStatusHeader {
+  color: white;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.gameStatus {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.gameMessage {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title {
+  color: white;
+  font-size: 2em;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
